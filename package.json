@@ -1,11 +1,29 @@
 {
   "name": "react-native-spring-dropdown",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/notlose/react-native-spring-dropdown.git"
+  },
+  "keywords": [
+    "react-native",
+    "dropdown",
+    "popover",
+    "pulldown",
+    "select",
+    "ios",
+    "android",
+    "react-component"
+  ],
+  "author": "Alex Spring <notlose@hotmail.com> (https://github.com/notlose)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/notlose/react-native-spring-dropdown/issues"
+  },
+  "homepage": "https://github.com/notlose/react-native-spring-dropdown",
 }
