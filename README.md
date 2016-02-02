@@ -1,4 +1,4 @@
-# react-native-spring-droopdown
+# react-native-spring-dropdown
 
 Support IOS and Android.
 
