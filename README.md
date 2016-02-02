@@ -14,7 +14,7 @@ Support IOS and Android.
 $ npm install react-native-spring-dropdown --save
 ```
 
-## Usage
+## Basic Usage
 ```js
 require('react-native-spring-dropdown');
 
@@ -36,8 +36,26 @@ render() {
   );
 }
 ```
-## Update
 
+## Props
+```js
+<Dropdown
+  data={[{key:1,value:'hello'},{key:2,value:'world'},{key:3,value:'!'}]}
+  onChange={this.onChange}
+  initValue="Select Me!"
+  selectStyle={{width:300,backgroundColor:'#fff'}}
+  optionStyle={{padding:20}}
+  optionTextStyle={{color:'blue'}}
+  cancelStyle={{padding:20}}
+  cancelTextStyle={{color:'red'}}
+  overlayStyle={{backgroundColor:'rgba(55,55,55,0.5)'}}
+  cancelText="Cancel!"
+  />
+
+```
+
+## Update
+1.0.4 added more custom style props
 
 ## todo
 custom styles

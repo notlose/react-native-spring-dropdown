@@ -13,6 +13,13 @@ var dropdown = React.createClass({
       transparent: false,
       selected:'please select',
       selectStyle:{},
+      optionStyle:{},
+      cancelStyle:{},
+      panelStyle:{},
+      optionTextStyle:{},
+      cancelTextStyle:{},
+      overlayStyle:{},
+      cancelText:'cancel',
     };
   },
   componentDidMount() {
@@ -21,6 +28,27 @@ var dropdown = React.createClass({
     }
     if(this.props.selectStyle){
       this.setState({selectStyle:this.props.selectStyle});
+    }
+    if(this.props.optionStyle){
+      this.setState({optionStyle:this.props.optionStyle});
+    }
+    if(this.props.cancelStyle){
+      this.setState({cancelStyle:this.props.cancelStyle});
+    }
+    if(this.props.panelStyle){
+      this.setState({panelStyle:this.props.panelStyle});
+    }
+    if(this.props.optionTextStyle){
+      this.setState({optionTextStyle:this.props.optionTextStyle});
+    }
+    if(this.props.cancelTextStyle){
+      this.setState({cancelTextStyle:this.props.cancelTextStyle});
+    }
+    if(this.props.overlayStyle){
+      this.setState({overlayStyle:this.props.overlayStyle});
+    }
+    if(this.props.cancelText){
+      this.setState({cancelText:this.props.cancelText});
     }
   },
   onChange(item){
@@ -47,15 +75,15 @@ var dropdown = React.createClass({
     }
     var options = this.props.data.map(function(option){
       return (<TouchableOpacity key={Math.random()} onPress={()=>onChange(option)}>
-        <View style={{padding:20,borderBottomWidth:1,borderBottomColor:'#ccc'}}>
-          <Text style={{textAlign:'center',fontSize:20}}>{option.value}</Text>
+        <View style={[{padding:20,borderBottomWidth:1,borderBottomColor:'#ccc'},that.state.optionStyle]}>
+          <Text style={[{textAlign:'center',fontSize:20},that.state.optionTextStyle]}>{option.value}</Text>
         </View>
         </TouchableOpacity>);
     });
     return (
       <View>
       <Modal transparent={true} ref="modal" visible={this.state.modalVisible} animated={this.state.animated}>
-        <View style={{width:width,height:height,backgroundColor:'rgba(0,0,0,0.7)'}}>
+        <View style={[{width:width,height:height,backgroundColor:'rgba(0,0,0,0.7)'},this.state.overlayStyle]}>
           <View style={{borderRadius:10,width:width*0.8,height:300,backgroundColor:'rgba(255,255,255,0.8)',left:width*0.1,top:(height-360)/2}}>
             <ScrollView>
             <View style={{paddingHorizontal:20}}>
@@ -63,10 +91,10 @@ var dropdown = React.createClass({
             </View>
             </ScrollView>
           </View>
-          <View style={{borderRadius:10,width:width*0.8,backgroundColor:'rgba(255,255,255,0.8)',left:width*0.1,top:(height-360)/2 + 10}}>
+          <View style={{left:width*0.1,top:(height-360)/2 + 10}}>
             <TouchableOpacity onPress={this.cancel}>
-            <View style={{padding:20}}>
-              <Text style={{textAlign:'center',color:'#333',fontSize:20}}>Cancel</Text>
+            <View style={[{borderRadius:10,width:width*0.8,backgroundColor:'rgba(255,255,255,0.8)',padding:20},this.state.cancelStyle]}>
+              <Text style={[{textAlign:'center',color:'#333',fontSize:20},this.state.cancelTextStyle]}>{this.state.cancelText}</Text>
             </View>
             </TouchableOpacity>
           </View>
