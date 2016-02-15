@@ -16,7 +16,7 @@ $ npm install react-native-spring-dropdown --save
 
 ## Basic Usage
 ```js
-require('react-native-spring-dropdown');
+var Dropdown = require('react-native-spring-dropdown');
 
 ...
 onChange(options) {
@@ -55,6 +55,8 @@ render() {
 ```
 
 ## Update
+1.0.5 updated android support
+
 1.0.4 added more custom style props
 
 ## todo
