@@ -1,3 +1,5 @@
+no longer be actively maintained as facebook released offical cross-platform "picker" module in 0.20.0
+
 # react-native-spring-dropdown
 
 Support IOS and Android.
