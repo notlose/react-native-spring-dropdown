@@ -14,6 +14,7 @@ var dropdown = React.createClass({
       transparent: false,
       selected:'please select',
       selectStyle:{},
+      selectTextStyle:{},
       optionStyle:{},
       cancelStyle:{},
       panelStyle:{},
@@ -29,6 +30,9 @@ var dropdown = React.createClass({
     }
     if(this.props.selectStyle){
       this.setState({selectStyle:this.props.selectStyle});
+    }
+    if(this.props.selectTextStyle){
+      this.setState({selectTextStyle:this.props.selectTextStyle});
     }
     if(this.props.optionStyle){
       this.setState({optionStyle:this.props.optionStyle});
@@ -127,7 +131,7 @@ var dropdown = React.createClass({
       {dp}
       <TouchableOpacity onPress={this.open}>
       <View style={[{borderColor:'#ccc',borderWidth:1,padding:20,flex:1},this.state.selectStyle]}>
-          <Text style={{textAlign:'center',color:'#333',fontSize:20}}>{this.state.selected}</Text>
+          <Text style={[{textAlign:'center',color:'#333',fontSize:20},this.state.selectTextStyle]}>{this.state.selected}</Text>
       </View>
       </TouchableOpacity>
       </View>
