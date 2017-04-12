@@ -4,11 +4,9 @@ no longer be actively maintained as facebook released offical cross-platform "pi
 
 Support IOS and Android.
 
-![My image](http://www.googledrive.com/host/0BwiaTbhy1w5CM1M1VXQ1Y0t4VWs)
+![My image](https://lh4.googleusercontent.com/sW6HxZPK8Dp1Yhjx80QAJfI2kfbnJ_65THR8MG3-72oEo1sQ4_LcbOB0TiWhBWr3saeHUHQ2=w1920-h983)
 
-<a href="http://www.googledrive.com/host/0BwiaTbhy1w5CbXNDYXpQckxFZE0/">Buy me a coffee if you like this</a>
 
-<a href="http://www.googledrive.com/host/0BwiaTbhy1w5CbXNDYXpQckxFZE0/"><img src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" border="0"></a>
 
 ## Install
 
